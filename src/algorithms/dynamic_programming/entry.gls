@@ -1,0 +1,21 @@
+Dynamic Programming
+	Attributed to Bellman.
+	Precursor to Bellman-Ford.
+	Bellman had a supervisor with a pathelogical disdain of research, regarding it as an abject waste of time.
+	Named dynamic programming to hide the fact that he was doing mathematical research.
+
+	"If you don't know guess. Guess every option. Then take the best guess."
+	"Guessing + recursion + memoization"
+	"Careful brute force"
+	"Shortest path in some DAG"
+
+	Memoization of recursive algorithms
+	1. Compartmentalize recursive algorithm into solvable steps (subproblems)
+	2. Memoize results of subproblems
+	3. Store and fetch results of subproblems
+	
+
+	Runtime:
+		 total_time = number of subproblems * subproblem_time
+		 total_time = n * O(subproblem_time)
+

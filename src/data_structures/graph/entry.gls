@@ -1,0 +1,194 @@
+Glossary Entry:
+	Data Structures:
+		Graph:
+			Info:
+				graph_types = {
+					'directed': {},
+					'undirected': 
+				}
+				get_edge_weight(u, v)
+			
+			Representation:
+				Adjacency Matrix:
+					"""
+						List of list of edges in [[0, 1, 2], [1, 0, 2], [1, 2, 0]] format
+
+						Benefits:
+							space efficient for representing dense graphs.
+							get_edge_weight(u,v) -> runs in O(1) time.
+							simplest representation.
+
+						Caveats:
+							requires O(v^2) space
+							iterating over set of all edges takes O(v^2) time.
+					"""
+
+				from_adjancency_matrix(adj_matrix) -> Graph()
+					"""
+						Create Graph object from adjacency matrix
+					"""
+
+				to_adjacency_matrix(Graph) -> adj_matrix
+					"""
+						Render graph as matrix.
+					"""
+
+				Adjacency List:
+					"""
+						List of edges in [] format
+
+						Benefits:
+							space efficient for representing sparse graphs.
+							iterating over set of all edges is efficient.
+
+						Caveats:
+							less space efficient for dense graphs.
+							get_edge_weight(u,v) -> runs in O(E) time.
+							slightly more complex representation.
+					"""
+
+				from_adjacency_list(adj_list) -> Graph()
+					"""
+						Create Graph object from adjacency list
+					"""
+
+				to_adjacency_list(Graph) -> adj_list
+					"""
+						Render graph as adjancency list
+					"""
+
+				Edge List:
+					"""
+						List of edges in [(u, v, w) ...] format.
+
+						Benefits:
+							More space efficient as graphs get sparse
+							Iterating over set of all edges is efficient (is a list)
+							Lacks structure
+
+						Caveats:
+							Less space efficient as graphs get denser
+							get_edge_weight(u,v) -> runs in O(E) time.
+							Lacks structure.
+					"""
+
+				from_edge_list(edge_list) -> Graph()
+					"""
+						Create Graph object from edge_list
+					"""
+
+				to_edge_list(Graph) -> edge_list
+					"""
+						Render graph as edge list
+					"""
+
+				Conversions:
+					adjacency_matrix_to_adjacency_list()
+					adjacency_matrix_to_edge_list()
+					adjacency_list_to_adjacency_matrix()
+					adjacency_list_to_edge_list()
+					edge_list_to_adjacency_matrix()
+					edge_list_to_adjacency_list()
+
+					conversion_timer(Graph):
+						conversion_times = {
+							adjacency_matrix_to_adjacency_list: timeit.timeit(adjacency_matrix_to_adjacency_list(Graph)),
+							adjacency_matrix_to_edge_list: timeit.timeit(adjacency_matrix_to_edge_list(Graph)),
+							adjacency_list_to_adjacency_matrix: timeit.timeit(adjacency_list_to_adjacency_matrix(Graph)),
+							adjacency_list_to_edge_list: timeit.timeit(adjacency_list_to_edge_list(Graph)),
+							edge_list_to_adjacency_matrix: timeit.timeit(edge_list_to_adjacency_matrix(Graph)),
+							edge_list_to_adjacency_list: timeit.timeit(edge_list_to_adjacency_list(Graph))
+						}
+						return conversion_times
+
+			Search:
+				depth_first_search()
+				breadth_first_search()
+
+			Detect:
+				type() -> dict['string']
+
+				is_directed() -> bool
+					"""
+						A Directed graph ...
+					"""
+
+				is_weighted() -> bool
+					"""
+						Edges in graph are weighted ...
+					"""
+
+				is_acyclic() -> bool
+					"""
+						An Acyclic graph ...
+					"""
+
+				is_tree() -> bool
+					"""
+						A tree is a graph with no cycles
+					"""
+
+					is_arborescence() -> bool (rooted_tree is probably better phrasing)
+					 	"""
+					 		Out-tree. A tree that expands from a single root.
+					 	"""
+
+					is_anti_arborescence() -> bool
+						 """
+						 	In-tree. A tree that moves toward a single root.
+						 """
+
+				is_bipartite() -> bool
+					"""
+						A Bipartite graph is a graph in which the nodes can be split into
+							two independent groups U, V where every edge is a connection
+							between a node in U and a node in V.
+					"""
+
+				is_strongly_connected() -> bool
+					"""
+					"""
+
+				is_complete() -> bool
+					"""
+						A Complete graph is a graph with a unique edge for every node pair.
+					"""
+
+				is_connected() -> bool
+					"""
+						A Connected graph is a graph in which there is a path from every
+							node to every other node.
+					"""
+
+				is_super_connected() -> bool
+					"""
+					"""
+
+				is_hyper_connected() -> bool
+					"""
+					"""
+
+				connectivity() -> int||float||fraction
+					"""
+						Return the minimum number of nodes to remove in order to isolate two subgraphs.
+					"""
+
+				components() -> generator list of components
+					"""
+						Return list of component subgraphs
+					"""
+
+				density() -> 0 <= float <= 1
+					"""
+						Return float representing average density of graph (total_conxns / total_possible_conxns)
+					"""
+
+				total_conxns() -> int
+					"""
+						Return the number of edges.
+					"""
+
+				total_possible_conxns() -> int
+					"""
+						Return the number of total possible edges for number of nodes in graph
+					"""

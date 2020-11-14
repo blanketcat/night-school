@@ -1,0 +1,14 @@
+Glossary Entry:
+	Data Structures:
+		Linked List:
+			Info:
+				get_length(head)
+				has_value(val)
+
+			Representation:
+				Value List:
+					"""
+						List of values
+					"""
+
+				
