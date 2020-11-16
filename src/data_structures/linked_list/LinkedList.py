@@ -17,7 +17,6 @@ class Node:
         self.next_node = next_node
 
 
-
 class LinkedList(object):
 	def __init__(self, head=None):
 		self.arg = arg
@@ -29,20 +28,23 @@ class LinkedList(object):
 		self.head = Node(val=data, next_node=next_node)
 
 	def traverse(self):
-		node_count = 0
 		cur_node = self.head
 
 		if cur_node is not None:
 			node_count = 1
-		while next_node is not None:
-
+			while next_node is not None:
+				node_count += 1
 
 	def append(self, data):
 		pass
 
 	def length(self):
-		node_count = 0
-		if 
+		cur_node = self.head
+
+		if cur_node is not None:
+			node_count = 1
+			while next_node is not None:
+				node_count += 1
 
 
 	def has_value(self, data):
@@ -55,4 +57,9 @@ class LinkedList(object):
 		pass
 
 
-def 
+def main():
+	pass
+
+
+if __name__ == '__main__':
+	main()

@@ -32,8 +32,6 @@ System:
 	Firmware:
 
 
-
-
 Algorithms:
 	Search:
 

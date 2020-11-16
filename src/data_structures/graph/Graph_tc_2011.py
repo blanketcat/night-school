@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python2.7
 
 """ Code example from Complexity and Computation, a book about
 exploring complexity science with Python.  Available free from
@@ -204,26 +204,8 @@ def is_odd(x):
     return x % 2
 
 
-def main(script, *args):
-    v = Vertex('v')
-    print(v)
-    w = Vertex('w')
-    print(w)
-    e = Edge(v, w)
-    print(e)
-    g = Graph([v,w], [e])
-    print(g)
-
-    vs = [Vertex(c) for c in 'abc']
-    g = Graph(vs)
-    g.add_regular_edges(2)
-
-    print(g)
-
-    g2 = eval(repr(g))
-    print(g2)
-
+def main():
+    pass
 
 if __name__ == '__main__':
-    import sys
-    main(*sys.argv)
+    main()

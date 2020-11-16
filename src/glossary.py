@@ -17,7 +17,7 @@ def gather_glossary(f_tree_root):
 	"""
 		Input: f_treestr -> 
 
-		Output: 
+		Output: dictionary of folder names as keys to entries as values
 	"""
 	glossary_entries = {}
 
