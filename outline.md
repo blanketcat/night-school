@@ -58,9 +58,11 @@ Geometric
 Mathematical:
 Limit
 
-Randomized:
-Monte Carlo
-Perlin Noise
+Randomized
+* Monte Carlo method
+* Las Vegas method
+* Noises
+	* Perlin Noise
 
 
 Greedy
