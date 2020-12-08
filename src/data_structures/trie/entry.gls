@@ -1,0 +1,11 @@
+# Trie
+
+An ordered search-tree.
+
+A.K.A. Prefix Tree
+
+The location on the tree dictates the key, rather than storing the key.
+
+Benefits: Find and Insert operations run in `O(m)` where m is the length of the string.
+
+Tries were first described by René de la Briandais in 1959. The term trie was coined two years later by Edward Fredkin, who pronounces it /ˈtriː/ (as "tree"), after the middle syllable of retrieval. However, other authors pronounce it /ˈtraɪ/ (as "try"), in an attempt to distinguish it verbally from "tree".

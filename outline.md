@@ -1,35 +1,94 @@
 Course Work
 
 `utils/`
-Files
 
-System
+The practical mud and boots engineering part of this.
 
-Regex
+`files.py`
 
-Pipes
+Thin wrappers for in-program file operations
+* read
+	* all
+	* lines
+	* n-bytes
+* write
+* copy
+* move
+* delete
+* read_permissions
+* change_permissions
+* stat/metadata
 
-Threads
 
-IPC GIL Bypass
+`system.py`
 
-Web
+Calls to get info about system
+* cpu
+* memory
+* PCI bus
+* USB
+	* Read from serial device
+* devices
+* network
+* firmware
+* OS
+	* version
+	* file system
+* processes
+* libraries
+	* files
+	* dependencies
 
-Database
-Type Coersion:
-string -> *type
-int -> *type
-hex -> *type
-base64 -> *type
-bytes -> *type
-float -> *type
-fractions -> *type
-array of _type_ -> array of *type
-array -> [*]
+
+`regex.py`
+
+A list of regex patterns that can be imported
+* common patterns
+
+
+`pipes.py`
+
+* Calling external programs
+* threading patterns
+* sockets
+* OS-level IPC
+* Multiple launch pattern to bypass GIL
+
+`concurency.py`
+
+`network.py`
+
+* web requests
+* raw http requests
+* web sockets
+
+
+`database.py`
+
+* common interaction patterns
+	* Postgres
+	* MySQL
+	* Elasticsearch
+	* MongoDB
+	* GraphQL
+	* One of the time series DB's if it ever comes up in my real life
+
+
+`types.py`
+
+Type Coersion Matrix
+* bytes -> type
+* string -> type
+* int -> type
+* float -> type
+* fractions -> type
+* hex -> type
+* base64 -> type
+* array -> []
+* hash_table -> []
+
 etc...
-Graphs:
-Discern types:
-cyclic vs. acyclic
+
 
 System:
 Processor:
@@ -38,9 +97,26 @@ Devices:
 Network:
 Firmware:
 
+### Data Structures
+
+The goal here is to create a complete list of existing, documented data structures, and map them to:
+* a table of best average worst case operation runtimes, complete with list of invariants for each case.
+* a list of algorithms available to that data structure
+
+Additionally, we would like to figure out, where possible, the time and memory requirements for transforming data from one structure to another structure, and provide a mechanism
+for determining whether for some operation, there is a performance benefit to be gained by converting the data to another data structure and performing the intended operation using some algorithm available to the new data structure.
+
+
 ### Algorithms
+
+The goal is to create a list of algorithms
+
 * Search
 * Sort
+	* insertion sort
+	* merge sort
+	* quick sort
+	* bubble sort
 * Graph
 
 Depth-First search:
@@ -71,34 +147,5 @@ Backtracking
 Branch & Bound
 FFT:
 
-Data Structures:
-Arrays:
-Linked List:
-Doubly Linked List:
-XOR Linked List:
-Matrix:
-Stack:
-Graph:
-Detect:
-is_directed() -> bool
-	is_strongly_connected() -> bool
-	connection_strength -> int||float||fraction
-is_cyclic() -> bool
-is_tree() -> bool
-	 is_arborescence() -> bool (rooted_tree is probably better phrasing)
-	 is_anti_arborescence() -> bool
 
-components()
-
-
-Skip List:
-Self-Organizing List:
-Unrolled Linked List:
-Queue:
-Binary Tree:
-Binary Search Tree:
-Heap:
-Hash:
-Strings:
-Hamming distance
 

@@ -4,10 +4,7 @@
     A queue is for FIFO processing
 
     In python it is preferred to use the queue from the 
-    deque library which I believe is a builtin library.
-
-    This can be accomplished without a library by aliasing
-    
+    deque library which is a built-in.
 """
 
 class Queue:

@@ -15,10 +15,12 @@ def merge_sort(array):
 	print(l)
 	print(r)
 	
-	# keep splitting and sorting
+	# keep splitting and sorting left array until
+	# arrays contain only one element
 	merge_sort(l)
 
-	# keep splitting and sorting
+	# keep splitting and sorting right array until
+	# arrays contain only one element
 	merge_sort(r)
 
 	# counters for l, r, and array

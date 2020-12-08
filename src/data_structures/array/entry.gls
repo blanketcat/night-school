@@ -1,0 +1,26 @@
+# Array
+
+An array consists of a series of (ideally) sequential addresses in memory.
+
+The value of each address, containing some value `k`, is accessible by it's index in the array.
+
+Assuming the data stored in each index is less than some upper bound, commonly referred to as 'word size' you can implement an array by simply defining the starting address, then access the stored value, by retrieving the value starting at starting_address + (index * word_size)
+
+Most all popular modern programming langauges take care of the implementation details for you.
+
+Arrays are generally visualized as a stack of values.
+
+
+```
+		---------------
+a[0]	|     k0      |		0x00
+		---------------
+a[1]	|     k1      |		0x00 + 1 * word_size
+		---------------
+a[2]	|     k2      |		0x00 + 2 * word_size
+		---------------
+a[...]	|     ...     |		0x00 + ... * word_size
+		---------------
+a[n]	|     kn      |		0x00 + n * word_size
+		---------------
+```

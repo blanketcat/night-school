@@ -1,3 +1,10 @@
+Seems kind of pointless to implement all these data structures and algorithms without some concrete examples of when they are useful.
+
 wiktionary
+- download: https://
+- I use a modified version of wiktextract to unpack the information 
+
 wikipedia
-fec
+- download: https://dumps.wikimedia.org/enwiki/20201201/enwiki-20201201-pages-meta-current.xml.bz2
+
+

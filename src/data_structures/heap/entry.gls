@@ -1,3 +1,42 @@
-Heap:
+# Heap
 
-	A priority queue
+A maximally-efficient priority queue.
+Essentially an array visualized as an almost complete or complete tree.
+The array is navigated, as a tree, by moving from a parent `n` either left or right
+
+### Types of Heaps
+
+* 2–3 heap
+* B-heap
+* Beap
+* Binary heap
+* Binomial heap
+* Brodal queue
+* d-ary heap
+* Fibonacci heap
+* K-D Heap
+* Leaf heap
+* Leftist heap
+* Pairing heap
+* Radix heap
+* Randomized meldable heap
+* Skew heap
+* Soft heap
+* Ternary heap
+* Treap
+* Weak heap
+
+
+
+
+
+Operation 	find-max 	delete-max 	insert 	increase-key 	meld
+Binary[8] 	Θ(1) 	Θ(log n) 	O(log n) 	O(log n) 	Θ(n)
+Leftist 	Θ(1) 	Θ(log n) 	Θ(log n) 	O(log n) 	Θ(log n)
+Binomial[8][9] 	Θ(1) 	Θ(log n) 	Θ(1)[b] 	Θ(log n) 	O(log n)[c]
+Fibonacci[8][10] 	Θ(1) 	O(log n)[b] 	Θ(1) 	Θ(1)[b] 	Θ(1)
+Pairing[11] 	Θ(1) 	O(log n)[b] 	Θ(1) 	o(log n)[b][d] 	Θ(1)
+Brodal[14][e] 	Θ(1) 	O(log n) 	Θ(1) 	Θ(1) 	Θ(1)
+Rank-pairing[16] 	Θ(1) 	O(log n)[b] 	Θ(1) 	Θ(1)[b] 	Θ(1)
+Strict Fibonacci[17] 	Θ(1) 	O(log n) 	Θ(1) 	Θ(1) 	Θ(1)
+2–3 heap[18] 	O(log n) 	O(log n)[b] 	O(log n)[b] 	Θ(1) 	?
